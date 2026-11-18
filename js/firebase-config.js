@@ -1,20 +1,21 @@
-// 1. Create a Firebase project at https://console.firebase.google.com/
-// 2. Register a Web App and copy its Firebase configuration below.
-// 3. Enable Authentication > Email/Password and create your admin account.
-// 4. Create a Cloud Firestore database.
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  projectId: "PASTE_YOUR_PROJECT_ID",
-  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
+  apiKey: "AIzaSyByea4IwklN7pG91iYS42rcfB8GzCxh6Ec",
+  authDomain: "my-firebase-project-fc889.firebaseapp.com",
+  projectId: "my-firebase-project-fc889",
+  storageBucket: "my-firebase-project-fc889.firebasestorage.app",
+  messagingSenderId: "29069307610",
+  appId: "1:29069307610:web:1f9c28ba6453ecfbc53fe3",
+  measurementId: "G-LB1963WCGD"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+const analytics = getAnalytics(app);
