@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Daily Journal — stories, updates, and articles.">
+  <title>The Daily Journal</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">THE DAILY JOURNAL</a>
+    <nav><a href="index.html">Home</a><a href="#latest">Latest</a><a href="login.html">Admin</a></nav>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">INDEPENDENT DIGITAL PUBLICATION</p>
+      <h1>Stories worth<br><span>your time.</span></h1>
+      <p class="muted">News, announcements, ideas, and stories — all in one place.</p>
+    </section>
+    <section id="latest">
+      <div class="section-heading"><div><p class="eyebrow">THE LATEST</p><h2>Published articles</h2></div></div>
+      <div id="article-list" class="article-grid"><p class="muted">Loading articles…</p></div>
+      <p id="empty-state" class="muted hidden">No published articles yet. Check back soon.</p>
+      <p id="error-state" class="notice hidden"></p>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© <span id="year"></span> The Daily Journal</span><span>Made with care.</span></footer>
+  <script type="module" src="js/public.js"></script>
+</body></html>

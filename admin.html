@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | The Daily Journal</title><link rel="stylesheet" href="css/style.css">
+</head><body>
+<header class="site-header"><a class="brand" href="index.html">THE DAILY JOURNAL</a><nav><a href="index.html" target="_blank">View website ↗</a><button id="logout-button" class="text-button">Log out</button></nav></header>
+<main class="container dashboard">
+  <div class="dashboard-heading"><div><p class="eyebrow">CONTENT MANAGEMENT</p><h1>Dashboard</h1><p class="muted">Create, edit, and publish your articles.</p></div><span id="admin-email" class="muted small"></span></div>
+  <section class="editor-panel">
+    <div class="section-heading"><div><p class="eyebrow">EDITOR</p><h2 id="form-heading">Create an article</h2></div></div>
+    <form id="article-form" class="editor-form">
+      <input id="article-id" type="hidden">
+      <label>Article title<input id="title" maxlength="160" required placeholder="Enter an engaging headline"></label>
+      <div class="form-row">
+        <label>Category<input id="category" maxlength="50" placeholder="News, Updates, Features…"></label>
+        <label>Featured image URL <span class="muted small">(optional)</span><input id="image-url" type="url" placeholder="https://example.com/image.jpg"></label>
+      </div>
+      <label>Short summary<textarea id="excerpt" rows="2" maxlength="300" placeholder="A short introduction for the homepage"></textarea></label>
+      <label>Article content<textarea id="content" rows="12" required placeholder="Write your article here…"></textarea></label>
+      <div class="form-row actions">
+        <label>Publication status<select id="status"><option value="draft">Save as draft</option><option value="published">Publish now</option></select></label>
+        <div class="button-row"><button class="button primary" type="submit" id="save-button">Save article</button><button class="button secondary hidden" type="button" id="cancel-edit">Cancel edit</button></div>
+      </div>
+      <p id="editor-message" class="notice hidden" role="status"></p>
+    </form>
+  </section>
+  <section class="manage-section">
+    <div class="section-heading"><div><p class="eyebrow">YOUR CONTENT</p><h2>Manage articles</h2></div><span id="article-count" class="muted small"></span></div>
+    <div id="manage-list" class="manage-list"><p class="muted">Loading your articles…</p></div>
+  </section>
+</main>
+<footer class="site-footer"><span>© <span id="year"></span> The Daily Journal CMS</span></footer>
+<script type="module" src="js/admin.js"></script>
+</body></html>
