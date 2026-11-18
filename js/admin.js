@@ -7,7 +7,7 @@ const form = $("article-form"), message = $("editor-message"), list = $("manage-
 let currentUser = null;
 
 onAuthStateChanged(auth, async user => {
-  if (!user) { location.href = "login.html"; return; }
+  if (!user || !user.emailVerified) { location.href = "login.html"; return; }
   currentUser = user;
   $("admin-email").textContent = user.email || "";
   await loadArticles();
